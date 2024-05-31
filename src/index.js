@@ -21,6 +21,12 @@ app.post('/quiz', async (req, res) => {
     res.status(200).json({ id });
 });
 
+app.get('/qa', (req, res) => {
+    res.status(200).json({
+        message: "Hello World",
+    });
+});
+
 // Get quiz (to review or edit it)
 app.get('/quiz/:id', async (req, res) => {
     const id = req.params.id;
